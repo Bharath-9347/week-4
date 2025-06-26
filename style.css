@@ -1,0 +1,142 @@
+/* Font & Reset */
+.date-select {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.date-select input {
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.planner {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  text-align: center;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+}
+
+.time-block {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  border-left: 6px solid #999;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: transform 0.2s;
+}
+
+.time-block:hover {
+  transform: scale(1.01);
+}
+
+.time {
+  width: 90px;
+  font-weight: 600;
+  color: #222;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+textarea.done {
+  text-decoration: line-through;
+  color: #aaa;
+  background: #f0f0f0;
+}
+
+button {
+  padding: 8px 14px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005bbb;
+}
+
+.priority-high { border-left-color: #ff4d4f; }
+.priority-medium { border-left-color: #ffa940; }
+.priority-low { border-left-color: #52c41a; }
+
+.bubble {
+  position: fixed;
+  bottom: -100px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: floatBubble linear infinite;
+  z-index: 0;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.priority-selector {
+  margin: 0 10px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
